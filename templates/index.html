@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coirwell Mattress | Nagaur</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f3ed;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 15px #00000015;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #9a6428;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 600px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background: linear-gradient(135deg, #eee1cf, #fff);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .tag {
+            color: #a56a2a;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin: 20px 0;
+        }
+
+        h1 span {
+            color: #a56a2a;
+            display: block;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            margin-right: 10px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: #198754;
+        }
+
+        .mattress {
+            width: 380px;
+            padding: 50px 30px;
+            background: white;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 20px 50px #00000020;
+        }
+
+        .bed {
+            font-size: 130px;
+        }
+
+        .mattress h2 {
+            color: #a56a2a;
+            margin-top: 20px;
+        }
+
+        .section {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 42px;
+            margin: 15px 0 40px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px #00000010;
+        }
+
+        .product-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .product h3 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .product p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .call {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .about {
+            padding: 80px 8%;
+            background: #eadfce;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin: 15px 0 25px;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .contact {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px #00000015;
+        }
+
+        .contact-box h2 {
+            color: #a56a2a;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 14px 25px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #202020;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        footer p {
+            margin-top: 10px;
+            color: #bbb;
+        }
+
+        .floating {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #198754;
+            color: white;
+            padding: 15px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 5%;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .mattress {
+                width: 100%;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">COIRWELL</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <div class="tag">PREMIUM MATTRESS</div>
+
+        <h1>
+            आराम की नई पहचान
+            <span>Coirwell Mattress</span>
+        </h1>
+
+        <p>
+            बेहतर नींद, शानदार आराम और भरोसेमंद गुणवत्ता।
+            अपने घर के लिए सही Mattress चुनें।
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn" href="#products">
+                Products देखें
+            </a>
+
+            <a class="btn whatsapp"
+               href="https://wa.me/919928487884"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="mattress">
+
+        <div class="bed">🛏️</div>
+
+        <h2>COIRWELL</h2>
+
+        <p>Premium Comfort Mattress</p>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="products">
+
+    <div class="tag">OUR PRODUCTS</div>
+
+    <h2>हमारे Mattress</h2>
+
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-icon">🛏️</div>
+
+            <h3>Premium Coir Mattress</h3>
+
+            <p>
+                आरामदायक और मजबूत Mattress,
+                बेहतर नींद के लिए।
+            </p>
+
+            <a class="call"
+               href="tel:+919928487884">
+                Call करें
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">🛌</div>
+
+            <h3>Comfort Mattress</h3>
+
+            <p>
+                Soft और comfortable design,
+                परिवार के लिए बेहतरीन विकल्प।
+            </p>
+
+            <a class="call"
+               href="tel:+919928487884">
+                Call करें
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">💤</div>
+
+            <h3>Luxury Mattress</h3>
+
+            <p>
+                Premium comfort और शानदार
+                sleeping experience।
+            </p>
+
+            <a class="call"
+               href="tel:+919928487884">
+                Call करें
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <div class="tag">ABOUT COIRWELL</div>
+
+    <h2>आराम जो आपको महसूस हो</h2>
+
+    <p>
+        Coirwell Mattress आपके आराम और बेहतर नींद को ध्यान
+        में रखकर बनाए गए हैं। हमारी कोशिश है कि आपको
+        अच्छी quality, शानदार comfort और भरोसेमंद service मिले।
+    </p>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <div class="tag">CONTACT US</div>
+
+    <h2>आज ही संपर्क करें</h2>
+
+    <div class="contact-box">
+
+        <h2>Coirwell Mattress</h2>
+
+        <p>
+            📍 Chenar, पुराने Water Box के सामने,<br>
+            Nagaur, Rajasthan
+        </p>
+
+        <p>
+            📞 <a href="tel:+919928487884">
+                99284 78884
+            </a>
+        </p>
+
+        <p>
+            📞 <a href="tel:+919717359655">
+                97173 59655
+            </a>
+        </p>
+
+        <a class="contact-btn"
+           href="tel:+919928487884">
+            📞 Call Now
+        </a>
+
+        <a class="contact-btn"
+           href="https://wa.me/919928487884"
+           target="_blank">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>COIRWELL MATTRESS</h3>
+
+    <p>
+        Premium Comfort • Better Sleep • Better Life
+    </p>
+
+    <p>
+        © 2026 Coirwell Mattress
+    </p>
+
+</footer>
+
+
+<a class="floating"
+   href="https://wa.me/919928487884"
+   target="_blank">
+    WhatsApp
+</a>
+
+</body>
+</html>
